@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+  <h1>Forms</h1>
+
+  <section>
+    <h1> Basic Form with text fields sent to entires method head</h1>
+
+    <form action="http://0.0.0.0:3000/entries" method="head">
+      <label for="fname">First name:</label><br>
+      <input type="text" id="fname" name="fname" value="John"><br>
+      <label for="lname">Last name:</label><br>
+      <input type="text" id="lname" name="lname" value="Doe"><br><br>
+      <input type="submit" value="Submit">
+    </form>
+  </section>
+  <section>
+    <h1> Form with Radio Buttons </h1>
+
+    <form action="https://www.calculator.net/bmi-calculator.html">
+      <input type="radio" id="html" name="age" value="HTML">
+      <label for="html">HTML</label><br>
+      <input type="radio" id="css" name="fav_language" value="CSS">
+      <label for="css">CSS</label><br>
+      <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+      <label for="javascript">JavaScript</label> <br />
+      <input type="submit" value="Submit">
+
+    </form>
+  </section>
+  <section>
+    <h1> form with checkboxes </h1>
+    <form>
+      <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+      <label for="vehicle1"> I have a bike</label><br>
+      <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+      <label for="vehicle2"> I have a car</label><br>
+      <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+      <label for="vehicle3"> I have a boat</label>
+      <br />
+      <input type="submit" value="Submit">
+
+    </form>
+  </section>
+  <section>
+    <h1> Select </h1>
+    <label for="cars">Choose a car:</label>
+    <select id="cars" name="cars">
+      <option value="volvo">Volvo</option>
+      <option value="saab">Saab</option>
+      <option value="fiat">Fiat</option>
+      <option value="audi">Audi</option>
+    </select>
+  </section>
+  <section>
+    <h1> Select with size </h1>
+    <label for="cars">Choose a car:</label>
+    <select id="cars" name="cars" size="3">
+      <option value="volvo">Volvo</option>
+      <option value="saab">Saab</option>
+      <option value="fiat">Fiat</option>
+      <option value="audi">Audi</option>
+    </select>
+  </section>
+  <section>
+    <h1> Select with allow mutltiple</h1>
+    <form>
+
+      <label for="cars">Choose a car:</label>
+
+      <select id="cars" name="cars" size="4" multiple>
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="fiat">Fiat</option>
+        <option value="audi">Audi</option>
+      </select>
+      <br />
+      <input type="submit" />
+    </form>
+
+  </section>
+
+  <section>
+    <h1>Text area</h1>
+    <textarea name="message" rows="10" cols="30">
+      The cat was playing in the garden.
+    </textarea>
+  </section>
+  <section>
+    <h1> text area with css styling to define size </h1>
+    <textarea name="message" style="width:200px; height:200px;">
+      STYLED. The cat was playing in the garden.
+    </textarea>
+  </section>
+
+  <section>
+    <h1> Button </h1>
+    <button type="button" onclick="alert('Hello World!')">Click Me!</button>
+
+  </section>
+  <section>
+    <h1> Field set </h1>
+    <form action="/action_page.php">
+      <fieldset>
+        <legend>Personalia:</legend>
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname" value="John"><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname" value="Doe"><br><br>
+      </fieldset>
+      <fieldset>
+        <legend> Employment info </legend>
+        <label for="employer"> Employer: </label><br>
+        <input type="text" id="employer" name="employer"><br>
+      </fieldset>
+      <input type="submit" value="Submit">
+    </form>
+  </section>
+  <section>
+    <h1> Output </h1>
+    <form action="/action_page.php" oninput="x.value=parseInt(a.value)+parseInt(b.value);y.value=a.value;z.value=b.value;">
+      0
+      <input type="range" id="a" name="a" value="50">
+      100
+      <input type="number" id="b" name="b" value="50">
+
+      <br>
+      <output name="y"> 50 </output>
+      +
+      <output name="z"> 50 </output>
+      =
+      <output name="x" for="a b"> 100 </output>
+
+      <br><br>
+      <input type="submit">
+      <p><strong>Note:</strong> The output element is not supported in Edge prior version 13.</p>
+    </form>
+
+  </section>
+  <section>
+    <h1> Data List - Like select but user is not restricted to list. </h1>
+    <form action="/action_page.php">
+      <input list="browsers" name="browser">
+      <datalist id="browsers">
+        <option value="Internet Explorer">
+        <option value="Firefox">
+        <option value="Chrome">
+        <option value="Opera">
+        <option value="Safari">
+      </datalist>
+      <input type="submit">
+    </form>
+
+  </section>
+  <section>
+    <h1> Input Types </h1>
+    <h3> Username and Password autocomplete set on from </h3>
+    <form id="password" target="#password" autocomplete="on">
+      <label for="username">Username:</label><br>
+      <input type="text" id="username" name="username"><br />
+      <br />
+      <label for="pwd">Password:</label><br>
+      <input type="password" id="pwd" name="pwd" value="password"><br />
+      <br />
+      <input type="reset">
+      <input type="submit" value="SUBMIT">
+    </form>
+    <h3> Username and Password name is readonly </h3>
+    <form id="password" target="#password">
+      <label for="username">Username:</label><br>
+      <input type="text" id="username" name="username" value="Bobby the chin" readonly><br />
+      <br />
+      <label for="pwd">Password:</label><br>
+      <input type="password" id="pwd" name="pwd" value=password><br />
+      <br />
+      <input type="reset">
+      <input type="submit" value="SUBMIT">
+    </form>
+    <h3> Username and Password name is disabled and wont be sent </h3>
+    <form id="password" target="#password">
+      <label for="username">Username:</label><br>
+      <input type="text" id="username" name="username" value="Bobby the chin" disabled><br />
+      <br />
+      <label for="pwd">Password:</label><br>
+      <input type="password" id="pwd" name="pwd" value=password><br />
+      <br />
+      <input type="reset">
+      <input type="submit" value="SUBMIT">
+    </form>
+
+    <h3> Username with size=8 </h3>
+    <form id="password" target="#password">
+      <label for="username">Username:</label><br>
+      <input type="text" id="username" name="username" value="Bobby" size="8"><br />
+      <input type="submit" value="SUBMIT">
+    </form>
+    <h3> Username with maxlength="8" </h3>
+    <form id="password" target="#password">
+      <label for="username">Username:</label><br>
+      <input type="text" id="username" name="username" value="Bobby" maxlength="8"><br />
+      <input type="submit" value="SUBMIT">
+    </form>
+
+
+
+
+    <h3> Checkbox</h3>
+    <form>
+
+      <input type="checkbox" id="bike" name="bike" value="Bike">
+      <label for="bike"> I have a bike</label><br>
+      <input type="checkbox" id="car" name="car" value="Car">
+      <label for="car"> I have a car</label><br>
+      <input type="checkbox" id="boat" name="boat" value="Boat">
+      <label for="boat"> I have a boat</label> <br />
+      <input type="reset">
+      <input type="submit" value="SUBMIT">
+    </form>
+
+    <h3> color </h3>
+    <form>
+
+      <label for="favcolor">Select your favorite color:</label>
+      <input type="color" id="favcolor" name="favcolor"> <br />
+      <input type="submit" value="SUBMIT">
+    </form>
+
+    <h3> date </h3>
+    <form>
+      <label for="birthday">Birthday:</label>
+      <input type="date" id="birthday" name="birthday"> <br />
+      <input type="submit" value="SUBMIT">
+    </form>
+    <h3> Email </h3>
+    <form>
+      <label for="email">Enter your email:</label>
+      <input type="email" id="email" name="email"> <br />
+      <input type="submit" value="SUBMIT">
+    </form>
+    <h3> file </h3>
+    <form>
+      <label for="myfile">Select a file:</label>
+      <input type="file" id="myfile" name="myfile"> <br />
+      <input type="submit" value="SUBMIT">
+    </form>
+
+    <h3> number with min max</h3>
+    <form>
+
+      <label for="quantity">Quantity (between 1 and 5):</label>
+      <input type="number" id="quantity" name="quantity" min="1" max="5"> <br />
+      <input type="submit" value="SUBMIT">
+    </form>
+    <h3> range</h3>
+    <h3> number with min max and step</h3>
+    <form>
+
+      <label for="quantity">Quantity (between 0 and 100):</label>
+      <input type="number" id="quantity" name="quantity" min="0" max="100" step="5"> <br />
+      <input type="submit" value="SUBMIT">
+    </form>
+    <h3> range</h3>
+    <form>
+
+
+      <label for="vol">Volume (between 0 and 50):</label>
+      <input type="range" id="vol" name="vol" min="0" max="50">
+      <input type="hidden" id="custId" name="custId" value="3487">
+
+      <input type="submit" value="SUBMIT">
+    </form>
+
+    <h3> search with autofocus</h3>
+    <form>
+
+      <label for="gsearch">Search Google:</label>
+      <input type="search" id="gsearch" name="gsearch" value="home prices" autofocus>
+
+      <input type="submit" value="SUBMIT">
+    </form>
+    <h3> Phone number with value attribute set and pattern</h3>
+    <form>
+
+      <label for="phone">Enter your phone number:</label>
+      <input type="tel" id="phone" name="phone" value="508-341-0319" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+      <input type="submit" value="SUBMIT">
+    </form>
+    <h3> Time with attribute required </h3>
+    <form>
+
+      <label for="appt">Select a time:</label>
+      <input type="time" id="appt" name="appt" required>
+      <input type="submit" value="SUBMIT">
+    </form>
+
+    <h3> URL with placeholder </h3>
+    <form>
+      <label for="homepage">Add your homepage:</label>
+      <input type="url" id="homepage" name="homepage" placeholder="www.google.com">
+      <input type="submit" value="SUBMIT">
+    </form>
+
+    <h3> week </h3>
+    <form>
+
+      <label for="week">Select a week:</label>
+      <input type="week" id="week" name="week">
+      <input type="submit" value="SUBMIT">
+    </form>
+    <br /> <br />
+
+    <h3> Image as button with height and width attributes</h3>
+    <form>
+      <label for="fname">First name:</label>
+      <input type="text" id="fname" name="fname"><br><br>
+      <label for="lname">Last name:</label>
+      <input type="text" id="lname" name="lname"><br><br>
+      <input type="image" src="../img/Blue.jpg" alt="Submit" width="48" height="48">
+    </form>
+    <section>
+      <h1> Input Form attributes </h1>
+      <h3> Specifing a field outside the form </h3>
+      <form id="form1">
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" name="fname"><br><br>
+        <input type="submit" value="Submit">
+      </form>
+
+      <label for="lname">Last name:</label>
+      <input type="text" id="lname" name="lname" form="form1">
+    </section>
+    <h3> form which submits to diffent locations </h3>
+    <form action="login/page" id="password" target="#password" autocomplete="on">
+      <label for="username">Username:</label><br>
+      <input type="text" id="username" name="username"><br />
+      <br />
+      <label for="pwd">Password:</label><br>
+      <input type="password" id="pwd" name="pwd" value="password"><br />
+      <br />
+      <input type="reset">
+      <input type="submit" value="Login">
+      <input type="submit" value="New User" formaction="new/user">
+    </form>
+    <h3> Form with encryption option </h3>
+    <form method="post">
+      <label for="fname">First name:</label>
+      <input type="text" id="fname" name="fname"><br><br>
+      <input type="submit" value="Submit">
+      <input type="submit" formenctype="multipart/form-data" value="Submit as Multipart/form-data">
+    </form>
+    <h3> form with option to override methtod (formmethod)</h3>
+    <form method="get">
+      <label for="fname">First name:</label>
+      <input type="text" id="fname" name="fname"><br><br>
+      <label for="lname">Last name:</label>
+      <input type="text" id="lname" name="lname"><br><br>
+      <input type="submit" value="Submit using GET">
+      <input type="submit" formmethod="post" value="Submit using POST">
+    </form>
+    <h3> form override targt </h3>
+    <form>
+      <label for="fname">First name:</label>
+      <input type="text" id="fname" name="fname"><br><br>
+      <label for="lname">Last name:</label>
+      <input type="text" id="lname" name="lname"><br><br>
+      <input type="submit" value="Submit">
+      <input type="submit" formtarget="_blank" value="Submit to a new window/tab">
+    </form>
+    <h3> form with option to turn off validation. email has required set</h3>
+    <form>
+      <label for="email">Enter your email:</label>
+      <input type="email" id="email" name="email" required><br><br>
+      <input type="submit" value="Submit">
+      <input type="submit" formnovalidate="formnovalidate" value="Submit without validation">
+    </form>
+    <h3> novalidate on form instead of submit button - will submit even with requiree attribute</h3>
+     <form novalidate>
+    <label for="email">Enter your email:</label>
+    <input type="email" id="email" name="email" required><br><br>
+    <input type="submit" value="Submit">
+    </form>
+
+  </section>
+  <section>
+
+
+    <h1> Filter Categories get request to mybudget </h1>
+
+    <form action="http://0.0.0.0:3000/categories" target="_blank" accept-charset="UTF-8" method="get">
+      <div class="my-5">
+        <label for="name_contains">Name Contains</label>
+        <input type="text" name="name_contains" id="name_contains" />
+      </div>
+      <div class="my-5">
+        <label for="super_contains">Super Contains</label>
+        <input type="text" name="super_contains" id="super_contains" />
+      </div>
+
+      <div class="inline">
+        <input type="submit" name="commit" value="Filter" class="btn-small" data-disable-with="Filter" />
+      </div>
+      <div class="inline">
+        <a class="btn-small" href="/categories">Clear Filters</a>
+      </div>
+    </form>
+  </section>
+
+</body>
+
+</html>

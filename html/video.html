@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script>
+
+    function playPause() {
+      var myVideo = document.getElementById("video1");
+
+      console.log("playPause")
+      if (myVideo.paused) {
+        console.log("play")
+
+        myVideo.play();
+      } else {
+        console.log("pause")
+
+        myVideo.pause();
+      }
+
+    }
+
+    function makeBig() {
+      var myVideo = document.getElementById("video1");
+
+      myVideo.width = 560;
+    }
+
+    function makeSmall() {
+      var myVideo = document.getElementById("video1");
+
+      myVideo.width = 320;
+    }
+
+    function makeNormal() {
+      var myVideo = document.getElementById("video1");
+
+      myVideo.width = 420;
+    }
+  </script>
+
+</head>
+
+<body>
+
+  <video width="400" controls>
+    <source src="../video/video1.mp4" type="video/mp4">
+    Your browser does not support HTML video.
+  </video>
+
+  <section>
+    <h1> Video with autoplay </h1>
+    <p>
+      May not play depending on browser settings
+    </p>
+    <video width="400" autoplay>
+      <source src="../video/video1.mp4" type="video/mp4">
+      Your browser does not support HTML video.
+    </video>
+  </section>
+  <section>
+
+    <h1> Video with autoplay and muted</h1>
+    <p>
+      May not play depending on browser settings
+    </p>
+    <video width="400" autoplay muted>
+      <source src="../video/video1.mp4" type="video/mp4">
+      Your browser does not support HTML video.
+    </video>
+  </section>
+  <section>
+    <h1> Video with custom controls</h1>
+
+    <div style="text-align:center">
+      <button onclick="playPause()">Play/Pause</button>
+      <button onclick="makeBig()">Big</button>
+      <button onclick="makeSmall()">Small</button>
+      <button onclick="makeNormal()">Normal</button>
+      <br><br>
+      <video id="video1" width="420">
+        <source src="../video/video1.mp4" type="video/mp4">
+        Your browser does not support HTML video.
+      </video>
+    </div>
+  </section>
+</body>

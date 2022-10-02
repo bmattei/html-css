@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<body>
+<head>
+  <script>
+
+    function clickCounterLocal() {
+      if (typeof(Storage) !== "undefined") {
+        if (localStorage.clickcount) {
+          localStorage.clickcount = Number(localStorage.clickcount)+1;
+        } else {
+          localStorage.clickcount = 1;
+        }
+        document.getElementById("resultLocal").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s).";
+      } else {
+        document.getElementById("resultLocal").innerHTML = "Sorry, your browser does not support web storage...";
+      }
+    }
+// Session Storage //
+function clickCounterSession() {
+  if (typeof(Storage) !== "undefined") {
+    if (sessionStorage.clickcount) {
+      sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
+    } else {
+      sessionStorage.clickcount = 1;
+    }
+    document.getElementById("resultSession").innerHTML = "You have clicked the button " + sessionStorage.clickcount + " time(s) in this session.";
+  } else {
+    document.getElementById("resultSession").innerHTML = "Sorry, your browser does not support web storage...";
+  }
+}
+</script>
+  </head>
+<div id="resultLocal"></div>
+
+
+<section>
+  <h1> Counter using local storage </h1>
+  <p><button onclick="clickCounterLocal()" type="button">Click me!</button></p>
+  <div id="resultLocal"></div>
+  <p>Click the button to see the counter increase.</p>
+<p>Close the browser tab (or window), and try again, and the counter will continue to count (is not reset).</p>
+</section>
+<section>
+  <h1> Counter using Session storage </h1>
+  <p><button onclick="clickCounterSession()" type="button">Click me!</button></p>
+  <div id="resultSession"></div>
+  <p>Click the button to see the counter increase.</p>
+  <p>Close the browser tab (or window), and try again, and the counter is reset.</p>
+  </section>
+</body>
+</html>

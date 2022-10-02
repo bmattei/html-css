@@ -1,0 +1,174 @@
+
+/*  Element selector - least selective */
+h2 {
+  color: blue;
+}
+
+
+/* Pseudo Selector */
+h2:hover {
+  color: DodgerBlue;
+}
+/* Class selector more specific than element */
+.subtitle {
+ color: blue;
+}
+/* Id selector - meant to be us once more selective then everything
+ but inline styling. */
+
+#title {
+  color: Blue;
+}
+#title:hover {
+  color: DodgerBlue;
+}
+
+#bob {
+  color: red;
+  background: black;
+}
+/* Playing with children pseudo selectors */
+ ul {
+    color: Brown;
+    background: Aqua;
+    font-weight: bold;
+}
+/* THis is not what I expected I was writing ul:first-child */
+#list li:first-child {
+    /* color: Coral; */
+    /* background: Brown; */
+}
+li:last-child {
+  font-style: italic;
+}
+
+/* This is to do it based on the uls class.  This take precedence over
+the above */
+
+.list li:first-child {
+  color: AliceBlue;
+}
+
+/* nth child stuff */
+
+#my-list li {
+  background: white;
+  color: black;
+  font-style: normal;
+}
+#my-list li:nth-child(2){
+  color: FireBrick;
+}
+
+/* onlye child */
+li:only-child {
+  color: green;
+}
+thead {
+  color:green
+}
+tbody tr:nth-child(odd) {
+  color: Indigo;
+}
+tbody tr:nth-child(even) {
+  color: green;
+}
+/* Anchor pseudo selectors */
+#google-link:link {
+  color: Blue;
+}
+#google-link:visited {
+  color: purple;
+}
+
+/* adjacent sibling selector */
+h3 + h4 {
+  color: red;
+}
+h4 + a:link {
+  color:red;
+}
+h4 + a:hover {
+  color:orange;
+}
+h4 + a:visited {
+  color:blue;
+}
+
+/* The element1~element2 selector matches occurrences of element2 that are preceded by element1.
+Both elements must have the same parent, but element2 does not have to be immediately preceded by element1.
+*/
+p ~ div {
+  background: red;
+}
+
+/* ul > li - every li within a UL */
+
+ul > li {
+font: italic small-caps bold 12px/30px Georgia, serif;
+}
+
+#l2 > li {
+  background: Brown;
+  color: white;
+}
+
+/* Descendent */
+#l2  li {
+  background: blue;
+  color: black;
+}
+
+/* attribute selectors
+   = exact match
+   ^ begins with
+   $ ends with
+   * contains
+   ~ The [attribute~="value"] selector is used to select elements with an attribute
+     value containing a specified word.
+     The following example selects all elements with a title attribute that contains a space-separated list of words, one of which is "flower":
+
+     Example
+     [title~="flower"] {
+       border: 5px solid yellow;
+     }
+   */
+/* attribute selector start with has same precendence as following so
+ last one takes precedence  */
+
+ [title~=flower] {
+   border: 5px solid yellow;
+ }
+img[src^="../img"] {
+  width: 1200px;
+  border: 10px solid black;
+}
+/* attribute selectors exact match*/
+img[src="../img/goblin.jpg"] {
+  width: 900px;
+}
+
+/* Properties - identifies element(s)O-
+   Attribute - what
+   value    - how
+
+   selector {} - selector block
+   selector { property: value;
+              property2: value;
+            }
+/* colors  types
+    name - red, green etc.
+    hex code: RED, GREEN, BLUE - in HEX
+              0x0000FF - BLUE
+              0x000000 - BLACK
+              0xFFFFFF - WHITE
+    RGB - RED, GREEN, BLUE - in DEcimal
+              rgb(0,0, 255) - BLUE
+              rgb(0,0,0) - BLACK
+              rgb(255, 255, 255) white
+              rgb(255,0, 0) red
+
+
+    google color picker provides HEX and RGB
+
+*/

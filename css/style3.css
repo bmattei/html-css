@@ -1,0 +1,82 @@
+table {
+  width: 90%;
+  margin: 0 0 0 5%;
+  text-align: left;
+}
+caption {
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 100px;
+}
+th {
+  font-size: 18px;
+}
+#table2 th {
+   font-family: Helvetica, sans-serif;
+}
+#table2 td {
+   font-family: verdana, sans-serif;
+   background: rgba(100,50,100,0.5)
+}
+
+
+#table3 table, #table3 th, #table3 td {
+  border: 3px rgba(0, 100,100, .75);
+  border-style: inset;
+}
+
+#table4 tr:nth-child(even)  {
+  background-color: rgba(0,256,100, 0.4);
+}
+#table4 td:nth-child(even)  {
+  background-color: rgba(0,256,100, 0.4);
+}
+
+#table5 table, #table5 td, #table5 th {
+  background-color: rgba(35, 45,55,0.2);
+  border: 2px solid green;
+}
+
+
+#table6 table, #table6 td, #table6 th {
+  background-color: rgba(35, 45,201,0.2);
+  border: 2px solid rgba(35, 45,201,0.7);
+}
+
+dt {
+  font-style: bold;
+}
+
+dd {
+  font-style: italic;
+}
+ul {
+  list-style-type:circle; /* disc (default), circle, square none */
+}
+ul ul {
+  list-style-type:square;
+}
+
+ul#list4  {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+}
+ul#list4 li {
+  float: left;
+}
+
+ul#list4 li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+
+ul#list4 li a:hover {
+  background-color: #111111;
+}

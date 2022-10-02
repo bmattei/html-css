@@ -1,0 +1,415 @@
+
+.grid-container1 {
+  display: grid;
+  background-color: rgb(120,0, 220);
+  margin: 10px;
+  height: 700px;
+  /* grid-template-columns: 25% 30% 45%;
+  grid-template-rows: 50px 50px; */
+  grid-template-columns: auto auto auto auto auto auto auto;
+  grid-template-rows: auto auto auto auto auto auto auto;
+  /* justify-content: space-around;
+  align-content: ; */
+  /* gap: 200px 50px; */
+
+ }
+.grid-container1 .grid-item {
+  color:rgb(220,0, 220);
+  background: rgb(0,120,0, 0.5);
+  margin: 2px;
+  font-size: 25px;
+  line-height: 40px;
+}
+.grid-container2{
+  display: grid;
+  background-color: rgb(120,0, 220);
+  margin: 10px;
+  height: 400px;
+  /* grid-template-columns: 25% 30% 45%;
+  grid-template-rows: 50px 50px; */
+  grid-template-columns: auto 30% 50%;
+  grid-template-rows: auto auto auto;
+}
+.grid-container2 .grid-item {
+  color:rgb(220,0, 220);
+  background: rgb(0,120,0, 0.5);
+  margin: 2px;
+  font-size: 25px;
+  line-height: 40px;
+}
+.flex-container4 {
+  background: rgb(202,207,217);
+  color: red;
+  height: 500px;
+  display: flex;
+  flex-direction: row; /* row is default  row-reverse, column, column-reverse */
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 30px;
+  padding: 10px;
+}
+.flex-container4 .flex-item {
+  height: 100px;
+  width: 200px;
+  color: red;
+  background-color:rgb(205,128,88);
+
+}
+.flex-item:nth-child(2) {
+  color: blue;
+  width: 300px;
+  height: inherit;
+  align-self: flex-start;
+  text-align: center;
+  justify-content: center;
+}
+.flex-item:nth-child(2) div {
+  margin-top: 40%;
+}
+
+
+
+
+
+.flex-container2 {
+    background: blue;
+    margin: 10px;
+    display: flex;
+    flex-direction: row; /* row is default  row-reverse, column, column-reverse */
+    justify-content: center;
+    aligh-items: center;
+  }
+.flex-item2 {
+    background: rgb(115, 124, 90);
+    color: purple;
+    font-size: 20px;
+    text-align: center;
+    /* width: 40px; */
+    margin: 10px;
+  }
+/* align-self - overrides align-items */
+  .flex-container3 {
+      background: blue;
+      margin: 10px;
+      height: 300px;
+      display: flex;
+      flex-direction: row; /* row is default  row-reverse, column, column-reverse */
+      justify-content: ;
+      align-items: center;
+    }
+  .flex-item3 {
+      background: rgb(115, 124, 90);
+      color: purple;
+      font-size: 20px;
+      text-align: center;
+      /* width: 40px; */
+      margin: 10px;
+    }
+
+
+/* element selectors are usually at the top */
+img {
+  width: 750px;
+}
+/* border size style color
+   padding or margin -  one value - all sides
+             2 value - vertical, horizontal
+             3 values - top, horzontal, botton
+             4 values - top, right, bottom, left
+             can also use margin-left, margin-right, margin-top, margin-bottom
+             Float is good for putting text next to images.
+    Other float properties - inherit - child element inherits from parent.
+    easier way to specify without doing it on every element.
+    float: none - does nothing to the float.
+         */
+#goblin {
+  width: 40%;
+  border: 3px double blue;
+  padding: 80px 60px 30px 10px;
+  float: right;
+
+}
+#wide {
+  width: 70vw;
+}
+/* em does NOT change as I make screen narrower on browser
+  vw and % do.  Because em is relatie to default text size
+  which does not change as I change the width of the  browser
+  FLOAT get confusing when trying to put these next to each other
+  inline-block works better.
+  */
+#grad {
+   width: 33%;
+   height: 30em;
+   background: linear-gradient(to right, yellow, orange, red, blue);
+   display: inline-block;
+}
+#grad2 {
+  width:33%;
+  height: 30em;
+  background: linear-gradient(230deg,rgba(0,0,255,1), rgba(0,0,255,0.2));
+  display: inline-block;
+  /* background: linear-gradient(to right, rgba(0,0,255,1), rgba(0,0,255,0.2)); */
+}
+/* inline-block - allows you to set sizes - but with no new line */
+#grad3 {
+  width: 33%;
+  height: 30em;
+  background: linear-gradient(to bottom right, rgba(255,255,255), rgba(0,0,0));
+  display: inline-block
+}
+/* radial gradients allow precentages and shapes */
+#grad4 {
+  width: 30em;
+  height: 30em;
+  background: radial-gradient(yellow, orange, red, purple);
+  display: inline-block;
+}
+#non {
+  margin: 20px;
+  height: 30px;
+  display: none; /* removes element and the space it uses */
+}
+
+
+/* url is a function copu the  image path by right
+clicking on image */
+body {
+  font-family: Lato;
+  /* background: rgb(204, 229, 255); */
+  /* color with opacity */
+  background: rgba(204, 229,255, 0.7)
+  /* using our background image you can slos use background-image
+  background: url("../img/AlyssaTentRock.jpg")
+  */
+}
+
+
+
+
+/* Generally color get lighter h1, h2.., title subtitle.. */
+.subtitle {
+  color: rgb(0, 148, 30);
+  font-family: Lato, sans-serif;
+}
+
+
+.link {
+
+}
+.para-text {
+
+}
+.list {
+
+}
+.form-input {
+
+}
+.site-table {
+
+}
+#title {
+  color: rgb(186,133,9);/* text color */
+}
+
+#service-image {
+  height: 500px;
+  width: 70%;
+  background: url("../img/small-duck.jpg");
+  /* repeat is default no-repeat option */
+  /* background-repeat: repeat; */
+  background-color: steelblue;
+  /* resize image to cover */
+  /* background-size: cover; */
+  /* keeps proportions */
+  background-size: contain;
+
+}
+
+/* units
+   Generally want to use relative units
+   relative -
+     em	Relative to the font-size of the element (2em means 2 times the size of the current font)
+     The default text size in browsers is 16px
+     ex	Relative to the x-height of the current font (rarely used)
+     ch	Relative to the width of the "0" (zero)
+     rem	Relative to font-size of the root element
+     vw	Relative to 1% of the width of the viewport*
+     vh	Relative to 1% of the height of the viewport*
+     vmin	Relative to 1% of viewport's* smaller dimension
+     vmax	Relative to 1% of viewport's* larger dimension
+     %	Relative to the parent element
+   absolute
+   px -
+   cm	centimeters
+   mm	millimeters
+  in	inches (1in = 96px = 2.54cm)
+  px *	pixels (1px = 1/96th of 1in) - Pixels (px) are relative to the viewing device. For low-dpi devices, 1px is one device pixel (dot) of the display. For printers and
+  high resolution screens 1px implies multiple device pixels.
+  pt	points (1pt = 1/72 of 1in)
+  pc	picas (1pc = 12 pt)
+   */
+   /* Text and font manipulation.
+      Text manipulation is independent of the font - underline capitilization
+      Font manipulatin - Sizing, weight, bold
+   */
+/* by default links are underlined
+           none
+          underline
+          line-through
+          overline*/
+#link22 {
+     text-decoration: none;
+}
+#link23 {
+     text-decoration: line-through;
+}
+/* text-transfrom uppercase, lowercase, capitlize */
+#text1 {
+     text-transform: capitilize;
+     font-family: Sarabun, san-sarif;
+     height: 100px;
+     width: 50em;
+     padding: 3em;
+     margin: 10em;
+     border: 3px solid red;
+
+
+}
+/* text aline center left right
+justify  - sets everything the same length.
+border solid dashed dotted double */
+#text2 {
+  font-size: 1.0em;
+  font-family: Barlow, sans-sarif;
+  height: 100px;
+  width: 50em;
+  padding: 10em;
+  margin: 3em;
+  background-color: grey;
+  border: 10px double blue;
+
+}
+
+
+/* Font properties size, font-weight. stye. Most fonts only support certain values
+   400 is normal
+
+   usually sans-seriff for websites.
+   font-family
+   */
+
+
+#text3 {
+  font-size: 1.0em;
+  margin: 3em;
+  font-weight: regular;
+  font-style: italic; /* italics - normal italic, oblique*/
+  font-family: "Roboto", serif;      /* if times new roman is available use it else serif */
+}
+/* using external fonts google fonts - fonts.google.com*/
+/* layout
+   BOX MODEL
+                --------------------------
+              |       Margin              |
+              |---------------------------|
+              |       Border              |
+              | --------------------------|
+              |      Padding              |
+              |---------------------------|
+              |      Content              |
+  Padding is space between the content and the border space within element
+  Border is divider between the padding and the margin
+     borders can be styled.
+  Margin is space between the border and other elements
+  Usually for height use fixed(px) and width use relative(vw or percentage).
+*/
+
+/* FLEX BOX
+   Alternative to using display and floats and layout properties that
+   is many cases is easier to use to layout the page. this newer than
+   the BOX model.
+     Flexbox element has a container and elements.
+    Contains is usually a div
+    justify-content: flex-start, flex-end, center, space-around, space-between
+    align-items: stretch(default), flex-start, flex-end, center, baseline
+   */
+  .flex-container {
+    background-color: rgb(0,124,130);
+    margin: 10px;
+    display: flex;
+    flex-direction: row; /* row is default  row-reverse, column, column-reverse */
+    flex-wrap: wrap; /* wrap and no-wrap; no-wrap squeezes everything into rowl */
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+
+
+  #flex-div1 {
+    order: 2; /* being able to order in the style makes it much easer than needing to change the css
+                 I can see how useful this would be for things like drag and drop. */
+  }
+  #flex-div5{
+    order: -1;
+  }
+  #flex-div2 {
+    order: 3;
+
+  }
+
+
+.submit-button {
+	border: none;
+	text-decoration: none;
+	font-family: "Lato", sans-serif;
+	font-weight: 600;
+	font-size: 20px;
+	color: white;
+	background: rgb(89, 150, 255);
+  margin-bottom: 10px;
+  /* transition: background 0.75s  ease 0.1s; */
+  transition: all 0.75s  ease 0.1s;
+
+}
+
+.submit-button:hover {
+	background: rgb(89, 100, 155);
+  color: black;
+}
+.my-form {
+  display:grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: 5% 75% 15%;
+  width: 600px;
+  height:400px;
+  gap: 10px 10px;
+}
+.form-text {
+  grid-column: 1/3;
+
+}
+@keyframes red-to-black {
+  from {background: red;}
+  to {background: black;}
+}
+@keyframes red-to-blue {
+  0% {background: red}
+  25 {background: orange}
+  50% {background: purple}
+  75% {background: green}
+  100% {background: blue}
+
+}
+#about-me {
+  animation: red-to-blue 5s linear 1s 5 reverse;
+  /*
+  animation: red-to-black;
+
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-delay: 1s;
+  animation-iteration-count: 5;
+  animation-direction: reverse; */
+}

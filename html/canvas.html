@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<head>
+  <script>
+    function drawLine() {
+      var c = document.getElementById("myCanvas");
+      var ctx = c.getContext("2d");
+      ctx.moveTo(0, 0);
+      ctx.lineTo(200, 100);
+      ctx.stroke();
+    }
+
+    function drawCircle() {
+      var c = document.getElementById("myCanvas");
+      var ctx = c.getContext("2d");
+      ctx.beginPath();
+      ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+      ctx.stroke();
+    }
+
+    function drawText() {
+      console.log("drawText")
+
+      var c = document.getElementById("myCanvas");
+      var ctx = c.getContext("2d");
+      ctx.font = "30px Arial";
+      ctx.fillText("Hello World", 10, 50);
+    }
+
+    function strokeText() {
+      console.log("Stroke")
+      var c = document.getElementById("myCanvas");
+      var ctx = c.getContext("2d");
+      ctx.font = "30px Arial";
+      ctx.strokeText("Hello World", 10, 50);
+    }
+    function gradient() {
+      var c = document.getElementById("myCanvas");
+      var ctx = c.getContext("2d");
+
+      // Create gradient
+      var grd = ctx.createLinearGradient(0, 0, 200, 0);
+      grd.addColorStop(0, "red");
+      grd.addColorStop(1, "white");
+
+      // Fill with gradient
+      ctx.fillStyle = grd;
+      ctx.fillRect(10, 10, 150, 80)
+    }
+    function clearGradient() {
+      var c = document.getElementById("myCanvas");
+      var ctx = c.getContext("2d");
+
+      // Create gradient
+      var grd = ctx.createLinearGradient(0, 0, 200, 0);
+      grd.addColorStop(0, "white");
+      grd.addColorStop(0, "white");
+
+      // Fill with gradient
+      ctx.fillStyle = grd;
+      ctx.fillRect(10, 10, 150, 80)
+    }
+    function doClear() {
+      console.log("IN CLEAR")
+      var c = document.getElementById("myCanvas");
+      var ctx = c.getContext("2d");
+      ctx.clearRect(0, 0, c.width, c.height);
+    }
+
+  </script>
+</head>
+<html>
+
+<body>
+  <h1> Empty Canvas </h1>
+  <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
+    Your browser does not support the HTML canvas tag.
+  </canvas>
+  <br />
+  <button onclick="drawLine()">draw line</button>
+  <button onclick="drawCircle()">draw circe</button>
+  <button onclick="drawText()">text</button>
+  <button onclick="strokeText()">Stroke</button>
+  <button onclick="gradient()">Gradient</button>
+  <button onclick="clearGradient()">clear Gradient</button>
+  <button onclick="doClear()">clear</button>
+
+
+</body>
+
+</html>
